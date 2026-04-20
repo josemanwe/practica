@@ -1,8 +1,17 @@
-# Gestor de Notas - Versión 1 (MVP)
+# Gestor de Notas - Versión 2
 
 ## Descripción
 
-Primera versión del gestor de notas. Implementa las funcionalidades básicas CRUD:
+Segunda versión del gestor de notas. Añade la funcionalidad de marcar tareas como completadas.
+
+### Novedades respecto a v1
+
+- ✅ Marcar notas como completadas (con checkbox visual)
+- ✅ Deshacer el estado completado
+- ✅ Cambio visual para notas completadas (tachado + opacidad)
+- ✅ Filtros: Todas / Pendientes / Completadas
+
+### Funcionalidades heredadas de v1
 
 - ✅ Crear notas con título y contenido
 - ✅ Ver lista de notas
@@ -12,10 +21,9 @@ Primera versión del gestor de notas. Implementa las funcionalidades básicas CR
 
 ## ⚠️ Estado de Seguridad
 
-**Esta versión contiene vulnerabilidades XSS deliberadas con fines educativos.**
+**Esta versión sigue conteniendo vulnerabilidades XSS.**
 
-Las notas se renderizan con `innerHTML` sin ninguna sanitización, lo que permite
-la ejecución de código malicioso.
+Se añadió nueva funcionalidad sin revisar la seguridad existente.
 
 ## Cómo usar
 
@@ -24,5 +32,5 @@ Abrir `index.html` en el navegador. No requiere servidor.
 ## Commit
 
 ```
-feat: Crear gestor básico de notas con funcionalidades CRUD
+feat: Agregar función de marcar tareas como completadas
 ```

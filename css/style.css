@@ -20,7 +20,7 @@ body {
 /* Header */
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 20px;
   background: #4a6fa5;
   color: white;
@@ -35,6 +35,35 @@ header h1 {
 .version {
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtro {
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: white;
+  color: #555;
+  border: 2px solid #ddd;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filtro:hover {
+  border-color: #4a6fa5;
+  color: #4a6fa5;
+}
+
+.filtro.activo {
+  background: #4a6fa5;
+  color: white;
+  border-color: #4a6fa5;
 }
 
 /* Formulario */
@@ -142,11 +171,27 @@ button:active {
   padding: 18px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   border-left: 4px solid #4a6fa5;
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, opacity 0.2s;
 }
 
 .nota-card:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+/* Nota completada */
+.nota-card.completada {
+  border-left-color: #5cb85c;
+  opacity: 0.75;
+}
+
+.nota-card.completada h3 {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.nota-card.completada p {
+  text-decoration: line-through;
+  color: #bbb;
 }
 
 .nota-card h3 {
@@ -174,6 +219,27 @@ button:active {
 .nota-acciones {
   display: flex;
   gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-completar {
+  background: #5cb85c;
+  color: white;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+}
+
+.btn-completar:hover {
+  background: #4cae4c;
+}
+
+.nota-card.completada .btn-completar {
+  background: #999;
+}
+
+.nota-card.completada .btn-completar:hover {
+  background: #888;
 }
 
 .btn-editar {
@@ -196,6 +262,17 @@ button:active {
 
 .btn-eliminar:hover {
   background: #c9302c;
+}
+
+/* Badge de completada */
+.badge-completada {
+  display: inline-block;
+  background: #5cb85c;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
 /* Sin notas */
@@ -223,5 +300,9 @@ button:active {
 
   .botones-form {
     flex-direction: column;
+  }
+
+  .filtros {
+    flex-wrap: wrap;
   }
 }

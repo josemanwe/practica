@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestor de Notas v1</title>
+  <title>Gestor de Notas v2</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
     <header>
       <h1>📝 Gestor de Notas</h1>
-      <p class="version">Versión 1.0 - MVP</p>
+      <p class="version">Versión 2.0 - Con tareas completadas</p>
     </header>
+
+    <!-- Filtros -->
+    <div class="filtros">
+      <button class="filtro activo" data-filtro="todas">Todas</button>
+      <button class="filtro" data-filtro="pendientes">Pendientes</button>
+      <button class="filtro" data-filtro="completadas">Completadas</button>
+    </div>
 
     <!-- Formulario para crear nota -->
     <section class="formulario-seccion">
